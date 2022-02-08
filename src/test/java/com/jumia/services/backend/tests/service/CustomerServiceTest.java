@@ -19,20 +19,13 @@ import com.jumia.services.backend.repository.CustomerRepository;
 import com.jumia.services.backend.service.CustomerService;
 
 @ExtendWith(SpringExtension.class)
-
-
 @SpringBootTest
 class CustomerServiceTest {
-//    CustomerService customerService = new CustomerService();
-	
-	
 	@Autowired
 	private CustomerService customerService;
 	
-    @MockBean
-    private CustomerRepository customerRepository;
-    
-    
+	@MockBean
+	private CustomerRepository customerRepository;
     
     @Test
     @DisplayName("Customer List Test")
@@ -57,12 +50,4 @@ class CustomerServiceTest {
     	
     	assertEquals(2, allCustomers.size());
     }
-//    @Test
-//    void testGetAllUgandaCustomers() {
-//        List<Customer> customers = new ArrayList<>();
-//        customers = customerService.getCustomersByState("UGANDA");
-//        for(Customer c : customers) {
-//        assertEquals(c.getPhone().substring(0, 4), "(256)");
-//        }
-//    }
 }

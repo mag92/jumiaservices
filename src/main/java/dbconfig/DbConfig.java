@@ -16,10 +16,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
 @EnableJpaRepositories(basePackages = "com.jumia.services.backend.repository")
-// @PropertySource("persistence-h2.properties")
-// @PropertySource("persistence-hsqldb.properties")
-// @PropertySource("persistence-derby.properties")
-// @PropertySource("persistence-sqlite.properties")
 public class DbConfig {
 	@Autowired Environment env;
 
