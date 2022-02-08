@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot</title>
+
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Jumia Customers</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Listing Customers</h1>
+        
+    </div>
+	<ul>
+		<li><a href = "/customers/filter?country=Uganda">Uganda customers</a></li>
+		<li><a href = "/customers/filter?country=Mozambique">Mozambique customers</a></li>
+		<li><a href = "/customers/filter?country=Cameroon">Cameroon customers</a></li>
+		<li><a href = "/customers/filter?country=Ethiopia">Ethiopia customers</a></li>
+		<li><a href = "/customers/filter?country=Morocco">Morocco customers</a></li>
+	</ul>
+    <table>
+    	<tr th:each="customer : ${filteredCustomers}">
+            <td><span th:text="${customer.name}"> Name </span></td>
+            <td><span th:text="${customer.phone}"> Phone </span></td>
+        </tr>
+    </table>
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
