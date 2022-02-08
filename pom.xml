@@ -3,7 +3,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.magdysul</groupId>
   <artifactId>JumiaServices</artifactId>
-  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>JumiaServices Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -108,21 +107,6 @@
 
   <build>
         <plugins> 
-        <plugin>
-    <!-- Build an executable JAR -->
-<groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.0</version>
-      <configuration>
-        <archive>
-          <manifest>
-                <addClasspath>true</addClasspath>
-                <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>com.jumia.services.backend.ApplicationRun</mainClass>
-          </manifest>
-        </archive>
-      </configuration>
-</plugin>
             <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
